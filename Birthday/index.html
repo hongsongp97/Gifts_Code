@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Điều anh muốn nói..</title>
+
+<!-- Font Independence -->
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<!-- Default CSS -->
+<link href="css/default.css" type="text/css" rel="stylesheet">
+
+<!-- Script -->
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+<!-- Font -->
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+			<audio autoplay="autopaly">
+					<source src="music/voyeu.mp3" type="audio/mp3">
+			</audio>  
+        <div id="main">
+<div id="mainDiv">
+	<div id="content">
+	
+		<!-- TEXT [EDIT ONLY] -->
+		<div id="code">
+			<span class="comments">~</span><br />
+			<span class="space"/><span class="comments">*Một điều anh muốn nói,</span><br />
+			<span class="space"/><span class="comments">*Tận ở trong trái tim của anh!</span><br />
+			<span class="space"/><span class="comments">~</span><br />
+			From: <span class="keyword">Phạm Hồng Sơn</span><br />
+			To: <span class="keyword">Lục Vân Anh</span><br />
+			<br />
+			<pre>          Hà Nội, ngày ... tháng ... năm ... </pre><br />
+			<span class="comments">// Hôm nay lại là một ngày mưa.</span> <br />
+			<span class="keyword">Vân Anh</span>, <br />
+			Thời gian chúng ta quen nhau đã rất lâu; <br />
+			Và anh thực sự không chắc nó còn bao lâu nữa :( <br />
+			Không chắc rồi chúng ta sẽ là gì của nhau; <br />
+			Không chắc rồi điều gì sẽ đến; <br />
+			Anh không dám chắc chắn điều gì cả; <br />
+			Nhưng anh biết; <br />
+			<span class="comments">Lời hứa ấy..</span> <br />
+			<span class="comments"><pre>      ..trong anh, đã không đơn thuần chỉ là lời hứa từ rất lâu rồi.</pre></span>
+			Anh yêu em - mãi mãi;<br />			
+			<br />
+			<span style="color: red; font-weight: bold; font-size: 150%"><pre><i>       Cảm ơn vì em đã đến với thế giới này, happy birthday!</i></pre></span>
+		</div>
+		<!-- END TEXT -->
+		
+		<!-- MESSAGES HEART -->
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Vân Anh, anh đã yêu em... ~
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+				Trong anh luôn nghĩ về em.<br/>
+					<div class="signature">- Hồng Sơn<div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Copyright/Watermark -->
+<div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>© 2017 Hồng Sơn - JVIons</b></p>
+</div>
+
+<!-- [!] CHANGE TIME HERRE [!] -->
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2012, 6, 20); // <--- Edit Time Here 
+together.setHours(21);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+<!-- [!] CHANGE TIME HERRE [!] -->
+
+</body>
+</html>
